@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   # GET /events/1 or /events/1.json
   def show
     @event = Event.find(params[:id])
+    @event_attendees = Attendee.where('event_id =?', params[:event_id])
   end
 
   # GET /events/new
@@ -66,6 +67,6 @@ class EventsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def event_params
-    params.require(:event).permit(:event, :date)
+    params.require(:event).permit(:event, :date, :user_id)
   end
 end
