@@ -18,5 +18,8 @@ module PrivateEvents
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Rack Mini profiler position
+    Rack::MiniProfiler.config.position = "bottom-right"
   end
 end
