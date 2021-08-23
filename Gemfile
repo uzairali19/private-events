@@ -31,6 +31,8 @@ gem 'bulma-rails', '~> 0.9.1'
 gem 'simple_form', '~> 5.1'
 # Gravatar Image
 gem 'gravatar_image_tag', '~> 1.2'
+# Devise
+gem 'devise', '~> 4.8'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -51,7 +53,6 @@ group :development do
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'guard', '~> 2.18'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
-  gem 'spring'
 end
 
 group :test do
