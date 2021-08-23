@@ -11,6 +11,9 @@ module PrivateEvents
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # Rack mini profiler
+    Rack::MiniProfiler.config.position = "bottom-right"
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
