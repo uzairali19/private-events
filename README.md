@@ -23,8 +23,8 @@ To get a local copy up and running follow these simple example steps:
 ### Setup
 
 - To get a local copy of the project open terminal
-- run `git clone https://github.com/uzairali19/members-only.git`
-- Then run `cd members-only`
+- run `git clone https://github.com/uzairali19/private-events.git`
+- Then run `cd private-events`
 
 ### Usage
 
