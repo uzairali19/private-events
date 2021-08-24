@@ -6,6 +6,9 @@ class EventsController < ApplicationController
   def index
     @events = Event.all.order('created_at DESC')
     @user = current_user
+    @upcoming_events = Event.upcoming
+    @previous_events = Event.previous
+    @event_attendees = Attendee.where('event_id =?', params[:event_id])
   end
 
   # GET /events/1 or /events/1.json

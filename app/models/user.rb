@@ -6,4 +6,7 @@ class User < ApplicationRecord
   has_many :events
   has_many :attendees
   has_many :attendances, through: :attended_events, source: :event
+
+  validates_uniqueness_of :email, presence: true
+  validates :password, presence: true
 end
