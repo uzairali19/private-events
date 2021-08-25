@@ -29,7 +29,7 @@ To get a local copy up and running follow these simple example steps:
 ### Usage
 
 - To use the app on local machine make sure you are on the root directory `private-events`
-- Open terminal and run `bundle install` to install all the dependecies then run `rails db:migrate`
+- Open terminal and run `bundle install` to install all the dependecies then run `rails db:create` and `rails db:migrate`
 - Finally run `rails server` go to your browser and type `localhost:3000`
 - Now you can play around with creating, updating or deleting users.
 

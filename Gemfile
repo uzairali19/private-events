@@ -53,6 +53,7 @@ group :development do
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'guard', '~> 2.18'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  gem 'spring'
 end
 
 group :test do
