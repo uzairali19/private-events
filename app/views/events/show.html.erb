@@ -1,0 +1,42 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <%= gravatar_image_tag(@event.user.email, size: 64, alt: @event.user.name) %>
+              </figure>
+            </div>
+            <div class="media-content">
+              <% if user_signed_in? %>
+                <p class="title is-4"> Created by: <%= @event.user.email %></p>
+              <% end %>
+              <strong>
+                <p class="title is-6"><%= @event.date %></p>
+              </strong><br />
+              <div class="content">
+                <p><%= @event.event %></p>
+                <% @event.attendees.each do |user| %>
+                  <p>
+                    <span class="has-text-link">Attendee handle:</span> <%= user.user.email %>
+                  </p>
+                  <%=  %>
+                <% end %>
+                <div class="field is-grouped">
+                  <p class="control">
+                    <%= link_to 'Edit', edit_event_path(@event),class: "button is-info" %>
+                  </p>
+                  <p class="control">
+                    <%= link_to 'Back', events_path, class: "button is-danger" %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
